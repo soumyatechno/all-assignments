@@ -1,10 +1,11 @@
-const express = require('express');
+import express from 'express';
 const app = express();
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+import cors from 'cors';
+import authRoutes from './routes/auth';
+import todoRoutes from './routes/todo';
 const port = 3000;
-const authRoutes = require('./routes/auth');
-const todoRoutes = require('./routes/todo');
-const cors = require('cors');
+
 
 app.use(cors());
 app.use(express.json());
